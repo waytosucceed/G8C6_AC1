@@ -1,0 +1,212 @@
+<html>
+    <head> <title>Class Activity 1</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      
+        <style>
+
+            #storydiv { 
+                height: 100%;
+                position: relative;     
+                border-left: 2px solid blue;    
+              }
+                      
+            #storydiv p {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                margin-left: 2px;
+                
+            }
+            
+            .maindiv{
+                border:5px ridge rgb(12, 96, 206);
+                margin:1%;
+                border-radius:20px
+            }
+
+            p{
+                font-size:30px;
+              
+                font-weight: bold;
+            }
+
+           
+
+            #nextbtn, #backbtn, #newbtn{
+                width: 25%;
+                font-size:20px;
+                margin-right: 5%;
+                position: relative;
+                
+            }
+
+            #backbtn, #newbtn{
+                display:none;
+            }
+
+            #family{
+                width:95%;
+                height:95%;
+            }
+
+            #about{
+                font-weight: bold;
+                font-size:40px;
+                color:rgb(7, 7, 89)
+            }
+
+
+            #imgdiv{
+                position:relative;
+            }
+         
+        
+        </style>
+</head>
+
+    <body> 
+        <div class="header" style="width:100%; box-shadow:5px 5px 10px rgb(0, 0, 0); padding-bottom:10px;">
+            <img src="Logo.png" width="5%" style="float:left; margin-top:25px;" class="img-responsive">
+            <span> <img src="header.png" width="30%" height="100px" class="img-responsive"></span>
+        </div>
+         <br>
+        <br>
+        
+        <center>        
+            <div>
+            <h2 id="about">Degree of Comparison Adjectives</h2>
+        </div>
+          
+         <div class="maindiv container-fluid" style="height:60%;">
+            <center>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11 imgdiv">
+                <img id="family" src="2.jpg" style="width:100%;"> 
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11" id='storydiv'>
+                <p id="story" style="text-align:left; width:100%;">
+              
+                    In the previous class we learnt the formation of degree of Comparison
+                    adjectives. Do you know that we can use any degree of comparison
+                    adjectives in any sentence in spoken and written expression?
+
+
+                    
+                </p> 
+            </div>
+        </center>
+        </div>
+        <br>
+        <button id="backbtn" onclick="backpic()" class="btn btn-success">Back</button>
+        <button id="nextbtn" onclick="update()" class="btn btn-success">Continue</button>
+        <button id="newbtn" onclick="newpage()" class="btn btn-success">Next</button>
+       
+       
+
+
+        </center>   
+
+        <script>
+
+            var images = ["Assests/1.jpg", "Assests/2.jpg", "Assests/3.jpg", "Assests/4.jpg", "Assests/5.jpg", "Assests/6.jpg", "Assests/7.jpg", "Assests/8.jpg", "Assests/9.jpg", "Assests/10.jpg", "Assests/11.jpg", "Assests/12.jpg","Assests/13.jpg","Assests/14.jpg"];
+            var para=["Austin and Cody are cousins as well as friends. One evening, their families were planning their Spring vacation and this time Austin and Cody wanted to experience something thrilling and exciting. They have often heard about adventure sports from their friends and seniors in school.",
+                    
+                      "They recently learnt that until and unless they turned 18 they couldn't go Skydiving or Paragliding.When Cody suggested scuba diving, Austin reacted by saying, “Though I am interested in seeing marine life in reality, I am not as brave as you about going underwater.” Cody replied, “I agree that I am braver than you when it comes to going underwater.",
+
+                      "But you will never know how brave you are unless you dive in.Come on Austin, you know swimming, I also know how much you dreamt of watching the incredible marine flora and fauna. Let’s put these two factors together and go for SCUBA DIVING! Trust me you will love it.”",
+
+                      "By reading the excerpt we can understand that: <br> <br>  x)Austin is <i><u> not as brave as </u></i> Cody when it comes to underwater diving.<br> y)Cody is <i><u> braver than </u></i> Austin when it comes to underwater diving.<br><br> <u>Both the sentences mean the same. The only difference is that Sentence (x) uses the Positive degree adjective “brave” and Sentence (y) uses the Comparative Degree adjective “braver”.</u>",
+
+                     "<img src='5th.jpg' style='width: 100%;height:360px;'  alt=''>",
+
+                     "Then we would have to rewrite the above two sentences by shifting the NOT from the first sentence to the  second sentence as shown below:  <br> Austin is as brave as Cody when it comes to underwater diving.<br><br>Cody is not braver than Austin when it comes to underwater diving. <br><br> ● Thus, if we <b><u> do not </u> </b> use the negative (NOT) in the sentence with the positive degree adjective, we would use the negative (NOT) in the sentence with the comparative degree adjective:",
+
+
+                     "Austin and Cody landed in ‘Poor Knights Islands’ in Northland with their families. Austin was elated to see the blue expanse of water in front of his eyes. Although he knew that each diver would be assigned a guide, he was apprehensive.",
+
+
+                     "Cody kept cheering him up. Finally it happened. “Turtles, seahorses, puffer fish, Manta Rays, Nudibranch, Whales, Dolphins, Hammerhead sharks, oh! Cody!, I saw it all ... .Red algae, phytoplankton, seagrasses, kelp, sargassum...everything..I can xnever forget the vibrant, colourful and thriving life that exists underwater.",
+
+                     "My eyes felt blessed. No other experience in my life was as enthralling as Scuba diving”. Cody replied with a big grin on his face “It was fascinating for me too Austin. I am happy for you.”",
+
+                   
+
+                      "<span style='background-color: royalblue;color:white;'>Discussion.</span> <br> <br><i><u> <span style='color: royalblue;'>“No other </span> </u></i> experience in my life was <i><u>  <span style='color: royalblue;'> as enthralling as Scuba diving”</span></u></i>.<br> The above sentence spoken by Austin uses a <u> Positive degree </u> adjective <u> “enthralling”.</u><br> In order to keep the meaning of the sentence same while transforming the use of the positive degree adjective to its <u> comparative degree - “more enthralling”,</u> we will write the following sentence:<br> ‘Scuba diving is <u>  <span style='color: royalblue;'> more enthralling than any other experience in my life.</span></u>’",
+
+                      "<img src='11th.jpg' style='width: 100%;height:360px;'  alt=''>",
+
+                      "When they all came back home. Austin told Cody. “I am grateful to have a friend like you. It is only for your motivation that I could navigate through my fear, enjoy the adventure and become brave. Very few friends in my life are as inspiring as you.” Cody hugged him saying “you are more than welcome Austin.”",
+
+                      "<span style='background-color: royalblue;color:white;'>DISCUSSION  </span> <br> “<span style='color: royalblue;'><u>Very few </u> friends in my life are as inspiring as you.</span>” <br><br> The above sentence spoken by Austin uses a <u> Positive degree </u> adjective  <u>“inspiring</u>”. <br> <br> In order to keep the meaning of the sentence same while transforming the use of the positive degree adjective to its <u> comparative degree - “more inspiring”,</u> we will write the following sentence: <br><br> <span style='color: royalblue;'> ‘You are <u>more inspiring </u> than most other friends in my life.</span>”",
+
+                      "<img src='14th.jpg' style='width: 100%;height:360px;'  alt=''>",
+
+                    ]
+            
+            
+            var i = -1;
+            function update(){
+                i++
+                document.getElementById("backbtn").style.display="inline-block"
+                if(i > para.length-1){
+                    document.getElementById("nextbtn").style.display="none"
+                    document.getElementById("newbtn").style.display="inline-block"
+                    document.getElementById("family").src = "last.jpg";
+                    document.getElementById("story").style.fontSize="22px"
+                    document.getElementById("story").style.borderLeftStyle="solid"
+                    document.getElementById("story").style.borderLeftColor="rgb(164, 246, 229)"
+                    document.getElementById("about").innerHTML = "Overview ";
+                    document.getElementById("story").innerHTML = "<i> We can express the same thought by using any degree of comparison adjective. We have to keep in mind that the meaning of the sentence must be the same. The structure of the sentence will change as per the degree of adjective. Introduction of phrases into the sentence help us with this kind of sentence transformations.<i><br> ";
+                }
+                else{
+                    document.getElementById("story").style.fontSize="22px"
+                    document.getElementById("story").style.backgroundColor="white"
+                    document.getElementById("about").innerHTML="The divers Austin and Cody"
+                     var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+              
+            }
+            };
+
+            function newpage(){
+                window.location="ac2.html"
+            }
+
+            function backpic(){
+                i=i-1
+                console.log(i)
+
+                if(i<0){
+                    document.getElementById("story").style.fontSize="22px"
+                   // document.getElementById("story").style.backgroundColor="lightblue"
+                    document.getElementById("backbtn").style.display="none"
+                    document.getElementById("nextbtn").style.display="inline-block"
+                    document.getElementById("family").src = "2.jpg";
+                    document.getElementById("about").innerHTML="Degree of Comparison Adjectives"
+                    document.getElementById("story").innerHTML = 'In the previous class we learnt the formation of degree of Comparison adjectives. Do you know that we can use any degree of comparison adjectives in any sentence in spoken and written expression?';
+                }
+                else{
+                document.getElementById("about").innerHTML="The divers Austin and Cody"
+                document.getElementById("story").style.fontSize="22px"
+                document.getElementById("story").style.backgroundColor="white"
+                document.getElementById("nextbtn").style.display="inline-block"
+                var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+                }
+            }
+
+    
+    </script>
+        
+    </body>
+</html>
